@@ -2,6 +2,7 @@ package com.example.javaoop;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     Cat myCat;
@@ -14,7 +15,19 @@ public class MainActivity extends AppCompatActivity {
         myCat.talk();
         Cat Sanya = new Cat(5,"Sanya", "SmartBeautiful", "Pink");
         Sanya.talk();
+        Sanya.breathe();
         Cat Tri = new Cat(27, "Roberto", "ArmGrusArbuz","Black");
         Tri.talk();
+        Tri.number0fLegs = 4;
+        Log.i("number0fLegs", String.valueOf(Tri.number0fLegs));
+        Puma puma = new Puma();
+        puma.name = "Leo";
+        puma.breathe();
+        puma.talk();
+        puma.isAlive=true;
+        Log.i("isAlive", String.valueOf(puma.isAlive));
+        Log.i("breathe()","My name is " + puma.name +" and " + puma.breathe());
+
+
     }
 }
