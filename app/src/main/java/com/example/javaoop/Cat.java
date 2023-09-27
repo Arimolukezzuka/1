@@ -4,14 +4,14 @@ import android.util.Log;
 public class Cat extends Animal {
     int age;
     String name;
-    private String breed;
-    private String color;
+    String breed;
+    String color;
     public Cat() {}
     public Cat(int a, String n, String b, String c){
-        age = a;
-        name = n;
-        breed = b;
-        color = c;
+        this.age = a;
+        this.name = n;
+        this.breed = b;
+        this.color = c;
     }
 
     public void talk(){

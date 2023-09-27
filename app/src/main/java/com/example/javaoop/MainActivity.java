@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("breathe()","My name is " + puma.name +" and " + puma.breathe());
         Tri.talk(4);
         Tri.talk("Boris");
-
+        Puma bagira = new Puma();
+        bagira.talk();
     }
 }
