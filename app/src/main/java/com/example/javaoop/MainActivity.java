@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Sanya.talk();
         Sanya.breathe();
         Cat Tri = new Cat(27, "Roberto", "ArmGrusArbuz","Black");
-        Tri.talk();
+
         Tri.number0fLegs = 4;
         Log.i("number0fLegs", String.valueOf(Tri.number0fLegs));
         Puma puma = new Puma();
@@ -32,11 +32,32 @@ public class MainActivity extends AppCompatActivity {
         Tri.talk(4);
         Tri.talk("Boris");
         Puma bagira = new Puma();
-        bagira.talk();
-        Cat puma11 = new Puma();
-        puma11.talk();
+
+        Cat puma11 = new Cat();
+
         Cat murzik = new Lion();
-        murzik.talk();
-        //ArrayList<Cat> cats = new ArrayList<>();
+
+        Lion lion = new Lion();
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(Tri);
+        cats.add(bagira);
+        cats.add(puma11);
+        cats.add(murzik);
+        cats.add(lion);
+        Cat cat = cats.get(0);
+        Cat cat1 = cats.get(1);
+        Cat cat2 = cats.get(2);
+        Cat cat3 = cats.get(3);
+        Cat cat4 = cats.get(4);
+        Puma puma1 = (Puma)cats.get(1);
+        puma1.talk();
+        Cat cat5 = cats.get(4);
+        if (cat5 instanceof Puma){
+            Puma puma2 = (Puma) cat5;
+            puma2.talk();
+        }else{
+            Log.i("instanceof", "This isn'n Puma");
+        }Puma puma2 = (Puma)cats.get(4);
+        puma2.talk();
     }
 }
