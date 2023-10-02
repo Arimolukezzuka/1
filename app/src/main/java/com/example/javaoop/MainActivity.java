@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     Cat myCat;
     @Override
@@ -31,5 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Tri.talk("Boris");
         Puma bagira = new Puma();
         bagira.talk();
+        Cat puma11 = new Puma();
+        puma11.talk();
+        Cat murzik = new Lion();
+        murzik.talk();
+        //ArrayList<Cat> cats = new ArrayList<>();
     }
 }
