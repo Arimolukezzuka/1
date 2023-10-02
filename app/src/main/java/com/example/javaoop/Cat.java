@@ -4,6 +4,7 @@ import android.util.Log;
 public class Cat extends Animal {
     int age;
     String name;
+    static int numberOfLegs = 4;
     String breed;
     String color;
     public Cat() {
