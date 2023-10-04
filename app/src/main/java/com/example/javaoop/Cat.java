@@ -1,12 +1,13 @@
 package com.example.javaoop;
+
 import android.util.Log;
 
 public class Cat extends Animal {
     int age;
     String name;
-    static int numberOfLegs = 4;
     String breed;
     String color;
+    final static int number0Legs = 4;
     public Cat() {
         this.name = "Capitan";
         this.age = 92;
@@ -30,5 +31,8 @@ public class Cat extends Animal {
 
     public void talk(String name){
         Log.i("talk()", "Meow! I'm cat. My name is "+ name+ ", and I'm " + age + " years old. I'm "+breed+" and "+color);
+    }
+    public final static String whatCatsLike(){
+        return "I like playing> jumping and scratching";
     }
 }
