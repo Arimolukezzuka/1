@@ -16,7 +16,12 @@ public class MainActivity extends AppCompatActivity {
        cat2.talk();
        Cat cat3 = new Cat(33,"Murzik","submarine","yellow");
        cat3.talk();
-       Cat.CatMood catMood=new Cat().new CatMood();
-       Log.i("level0mood",String.valueOf(catMood.level0mood));
+       Cat cat4 = new Cat();
+       Cat cat5 = new Cat();
+       Cat cat6 = new Cat();
+       Cat cat7 = new Cat();
+       Log.i("count",""+Cat.count);
+       Cat.CountResetter countResetter = new Cat.CountResetter();
+       Log.i("count",""+Cat.count);
    }
 }

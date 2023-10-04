@@ -1,5 +1,6 @@
 package com.example.javaoop;
 
+import android.media.audiofx.PresetReverb;
 import android.util.Log;
 
 public class Cat extends Animal {
@@ -11,7 +12,21 @@ public class Cat extends Animal {
     static int count = 0;
     String hello;
     CatMood catMood;
-    class CatMood{
+    static class CountResetter{
+        boolean moreThan100;
+        CountResetter(){
+            if(Cat.count>5){
+                moreThan100=true;
+            }
+            if (moreThan100){
+                resetCounter(0);
+            }
+        }
+        void resetCounter(int value){
+            Cat.count=value;
+        }
+    }
+    private class CatMood{
         int level0mood;
         CatMood(){
             if (Cat.this.age <2){
