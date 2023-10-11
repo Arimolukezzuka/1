@@ -39,6 +39,7 @@ public class Cat extends Animal {
         }
     }
     public Cat() {
+        count++;
         this.name = "Capitan";
         this.age = 92;
         this.breed="Vorobei";
@@ -92,7 +93,27 @@ public class Cat extends Animal {
     public void talk(String name){
         Log.i("talk()", "Meow! I'm cat. My name is "+ name+ ", and I'm " + age + " years old. I'm "+breed+" and "+color);
     }
-    public final static String whatCatsLike(){
+    public static String whatCatsLike(){
         return "I like playing> jumping and scratching";
+    }
+
+    public void catchMouse(int mouseWeight){
+        class Mouse {
+            String color;
+            int weight;
+            public Mouse(String color, int weight){
+                this.color = color;
+                this.weight=weight;
+            }
+            String mouseVoice(){
+                return "Pi-pi-pi";
+            }
+        }
+        Mouse mouse = new Mouse("White",mouseWeight);
+                if(mouse.weight<2){
+                    Log.i("cat say","I will eat you!" + mouse.mouseVoice());
+                } else{
+                    Log.i("cat say","I afraid you!");
+                }
     }
 }
