@@ -3,11 +3,15 @@ package com.example.javaoop;
 import android.util.Log;
 
 public class Lion extends Cat {
-    public void talk(){
-        Log.i("talk()", "R-r-r-r-r-r-r! I'm Lion, my name is "+ name+ ", and I'm " + age + " years old. I'm "+breed+" and "+color + whatCatsLike());
-
-    }
+   public Lion(){
+       Log.i("constructor","Constructor Lion()");
+   }
     public static String whatLionsLike(){
         return "I am Lion and I like playing> jumping and scratching";
+    }
+
+    @Override
+    public void draw() {
+
     }
 }

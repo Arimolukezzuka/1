@@ -3,15 +3,16 @@ package com.example.javaoop;
 import android.media.audiofx.PresetReverb;
 import android.util.Log;
 
-public class Cat extends Animal {
+public abstract class Cat extends Animal {
     int age;
     String name;
-    String breed;
-    String color;
+    private String breed;
+    private String color;
     final static int number0Legs = 4;
     static int count = 0;
     String hello;
     CatMood catMood;
+
     static class CountResetter{
         boolean moreThan100;
         CountResetter(){
@@ -60,11 +61,11 @@ public class Cat extends Animal {
                 break;
         }
     }
-    public Cat(int a, String n, String b, String c){
-        this.age = a;
-        this.name = n;
-        this.breed = b;
-        this.color = c;
+    public Cat(int age, String name, String breed, String color){
+        this.age = age;
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
         catMood=new CatMood();
         switch (catMood.level0mood){
             case 100:
