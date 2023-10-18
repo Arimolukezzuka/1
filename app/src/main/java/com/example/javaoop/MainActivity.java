@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity implements Printable{
        Printable printable = new Puma();
         printable.print();
         ((Puma) printable).move();
-        printAnyObject(new MainActivity());
+        Puma puma = new Puma();
+        Log.i("speedOfMoving",""+puma.speedOfMoving);
+        Log.i("speedOfMoving",""+((Puma)printable).speedOfMoving);
+        Log.i("speedOfMoving",""+Movable.speedOfMoving);
    }
    void printAnyObject(Printable printable){
 
